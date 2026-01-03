@@ -200,6 +200,11 @@ extern class DiscordRichPresence
 	function new():Void;
 
 	/**
+	 * Creates a new instance.
+	 */
+	static function create():DiscordRichPresence;
+
+	/**
 	 * Type of activity of the rich presence.
 	 */
 	var type:DiscordActivityType;
@@ -306,6 +311,11 @@ extern class DiscordUser
 	function new():Void;
 
 	/**
+	 * Creates a new instance.
+	 */
+	static function create():DiscordUser;
+
+	/**
 	 * ID of the user.
 	 */
 	var userId:cpp.ConstCharStar;
@@ -355,6 +365,11 @@ extern class DiscordEventHandlers
 	 * Creates a new instance.
 	 */
 	function new():Void;
+
+	/**
+	 * Creates a new instance.
+	 */
+	static function create():DiscordEventHandlers;
 
 	/**
 	 * Callback for when the client becomes ready.

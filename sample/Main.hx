@@ -49,7 +49,7 @@ class Main
 			Sys.println('Discord: Connected to user @${username} ($globalName)');
 
 		final discordPresence:DiscordRichPresence = new DiscordRichPresence();
-		discordPresence.type = DiscordActivityType_Watching;
+		discordPresence.type = DiscordActivityType.DiscordActivityType_Watching;
 		discordPresence.state = "West of House";
 		discordPresence.details = "Frustration";
 		discordPresence.largeImageKey = "canary-large";

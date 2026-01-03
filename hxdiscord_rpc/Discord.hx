@@ -24,6 +24,36 @@ extern class Discord
 	static var RPC_VERSION:Int;
 
 	/**
+	 * No reply.
+	 */
+	@:native('DISCORD_REPLY_NO')
+	static var REPLY_NO:Int;
+
+	/**
+	 * Yes reply.
+	 */
+	@:native('DISCORD_REPLY_YES')
+	static var REPLY_YES:Int;
+
+	/**
+	 * Ignore reply.
+	 */
+	@:native('DISCORD_REPLY_IGNORE')
+	static var REPLY_IGNORE:Int;
+
+	/**
+	 * Private party.
+	 */
+	@:native('DISCORD_PARTY_PRIVATE')
+	static var PARTY_PRIVATE:Int;
+
+	/**
+	 * Public party.
+	 */
+	@:native('DISCORD_PARTY_PUBLIC')
+	static var PARTY_PUBLIC:Int;
+
+	/**
 	 * Registers the application.
 	 *
 	 * @param applicationId The application ID for the Discord app.
@@ -104,4 +134,20 @@ extern class Discord
 	 */
 	@:native('Discord_UpdateHandlers')
 	static function UpdateHandlers(handlers:cpp.RawPointer<DiscordEventHandlers>):Void;
+
+	/**
+	 * Sets the debug mode.
+	 *
+	 * @param debug Whether to enable debug mode.
+	 */
+	@:native('Discord_SetDebugMode')
+	static function SetDebugMode(debug:Bool):Void;
+
+	/**
+	 * Sends a custom command.
+	 *
+	 * @param command The command to send.
+	 */
+	@:native('Discord_SendCustomCommand')
+	static function SendCustomCommand(command:cpp.ConstCharStar):Void;
 }
